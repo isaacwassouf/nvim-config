@@ -131,6 +131,26 @@ return {
     lazy = false,
   },
 
+  {
+    "nvim-tree/nvim-tree.lua",
+    lazy = false,
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+    },
+    config = function()
+      local defaultConfig = require("nvchad.configs.nvimtree")
+      require("nvim-tree").setup (vim.tbl_deep_extend('force', defaultConfig, {
+        git = {
+          enable = true,
+          ignore = false,
+        },
+        filters = {
+          dotfiles = false,
+        },
+      }))
+    end,
+  },
+
   -- {
   --   "mfussenegger/nvim-jdtls",
   --   ft = { "java" },
