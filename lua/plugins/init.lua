@@ -138,14 +138,33 @@ return {
       "nvim-tree/nvim-web-devicons",
     },
     config = function()
-      local defaultConfig = require("nvchad.configs.nvimtree")
-      require("nvim-tree").setup (vim.tbl_deep_extend('force', defaultConfig, {
+      local defaultConfig = require "nvchad.configs.nvimtree"
+      require("nvim-tree").setup(vim.tbl_deep_extend("force", defaultConfig, {
         git = {
           enable = true,
           ignore = false,
         },
         filters = {
           dotfiles = false,
+        },
+      }))
+    end,
+  },
+
+  {
+    "lewis6991/gitsigns.nvim",
+    event = "User FilePost",
+    config = function()
+      local defaultConfig = require "nvchad.configs.gitsigns"
+      require("gitsigns").setup(vim.tbl_extend("force", defaultConfig, {
+        current_line_blame = true,
+        current_line_blame_opts = {
+          virt_text = true,
+          virt_text_pos = "right_align", -- 'eol' | 'overlay' | 'right_align'
+          delay = 1000,
+          ignore_whitespace = false,
+          virt_text_priority = 100,
+          use_focus = true,
         },
       }))
     end,
