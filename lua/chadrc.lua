@@ -21,10 +21,11 @@ M.base46 = {
   theme = "nightfox",
   transparency = true,
 
-  -- hl_override = {
-  -- 	Comment = { italic = true },
-  -- 	["@comment"] = { italic = true },
-  -- },
+  hl_override = {
+    CursorLine = { bg = "one_bg2" },
+    -- Comment = { italic = true },
+    -- ["@comment"] = { italic = true },
+  },
 }
 
 M.nvdash = {
@@ -50,8 +51,7 @@ M.mason = {
     "golines",
     "nginx-language-server",
     "pbls",
-    "bash-language-server",
-    "jdtls",
+    "bash-language-server"
   },
 }
 
