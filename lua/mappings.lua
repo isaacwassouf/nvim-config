@@ -21,4 +21,8 @@ map(
   { desc = "List interface implementation(s) in Telescope" }
 )
 
+map("i", "<C-l>", function()
+  vim.fn.feedkeys(vim.fn["copilot#Accept"](), "")
+end, { replace_keycodes = true, nowait = true, silent = true, expr = true, noremap = true, desc = "Copilot Accecpt" })
+
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")

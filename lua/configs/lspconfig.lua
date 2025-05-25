@@ -14,12 +14,12 @@ local servers = {
   "tailwindcss",
   "svelte",
   "eslint",
-  "yamlls",
   "pyright",
   "nginx_language_server",
+  "yamlls",
   "pbls",
   "bashls",
-  "terraformls"
+  "terraformls",
 }
 local nvlsp = require "nvchad.configs.lspconfig"
 
