@@ -19,6 +19,7 @@ local servers = {
   "nginx_language_server",
   "pbls",
   "bashls",
+  "terraformls"
 }
 local nvlsp = require "nvchad.configs.lspconfig"
 

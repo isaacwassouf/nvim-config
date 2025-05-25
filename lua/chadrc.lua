@@ -18,7 +18,7 @@ M.ui = {
 }
 
 M.base46 = {
-  theme = "nightfox",
+  theme = "kanagawa",
   transparency = true,
 
   hl_override = {
@@ -51,7 +51,8 @@ M.mason = {
     "golines",
     "nginx-language-server",
     "pbls",
-    "bash-language-server"
+    "bash-language-server",
+    "terraform-ls"
   },
 }
 
